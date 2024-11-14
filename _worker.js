@@ -872,85 +872,6 @@ proxies:
     headers:
       Host: ${hostName}
 
-- name: cf-vless-8080
-  type: vless
-  server: ${bestCFIP}
-  port: 8080
-  uuid: ${userID}
-  udp: false
-  tls: false
-  network: ws
-  ws-opts:
-    path: "/?ed=2048"
-    headers:
-      Host: ${hostName}
-
-- name: cf-vless-8880
-  type: vless
-  server: ${bestCFIP}
-  port: 8880
-  uuid: ${userID}
-  udp: false
-  tls: false
-  network: ws
-  ws-opts:
-    path: "/?ed=2048"
-    headers:
-      Host: ${hostName}
-
-- name: cf-vless-2052
-  type: vless
-  server: ${bestCFIP}
-  port: 2052
-  uuid: ${userID}
-  udp: false
-  tls: false
-  network: ws
-  ws-opts:
-    path: "/?ed=2048"
-    headers:
-      Host: ${hostName}
-
-- name: cf-vless-2082
-  type: vless
-  server: ${bestCFIP}
-  port: 2082
-  uuid: ${userID}
-  udp: false
-  tls: false
-  network: ws
-  ws-opts:
-    path: "/?ed=2048"
-    headers:
-      Host: ${hostName}
-
-- name: cf-vless-2086
-  type: vless
-  server: ${bestCFIP}
-  port: 2086
-  uuid: ${userID}
-  udp: false
-  tls: false
-  network: ws
-  ws-opts:
-    path: "/?ed=2048"
-    headers:
-      Host: ${hostName}
-
-- name: cf-vless-2095
-  type: vless
-  server: ${bestCFIP}
-  port: 2095
-  uuid: ${userID}
-  udp: false
-  tls: false
-  network: ws
-  servername: ${hostName}
-  ws-opts:
-    path: "/?ed=2048"
-    headers:
-      Host: ${hostName}
-
 - name: cf-vless-tls-443
   type: vless
   server: ${bestCFIP}
@@ -1041,13 +962,6 @@ proxy-groups:
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-    // - cf-vless-80
-    // - cf-vless-8080
-    // - cf-vless-8880
-    // - cf-vless-2052
-    // - cf-vless-2082
-    // - cf-vless-2086
-    // - cf-vless-2095
     - cf-vless-tls-443
     - cf-vless-tls-2053
     - cf-vless-tls-2083
@@ -1061,13 +975,6 @@ proxy-groups:
   interval: 300
   tolerance: 50
   proxies:
-    // - cf-vless-80
-    // - cf-vless-8080
-    // - cf-vless-8880
-    // - cf-vless-2052
-    // - cf-vless-2082
-    // - cf-vless-2086
-    // - cf-vless-2095
     - cf-vless-tls-443
     - cf-vless-tls-2053
     - cf-vless-tls-2083
@@ -1081,13 +988,6 @@ proxy-groups:
     - 负载均衡
     - 自动选择
     - DIRECT
-    // - cf-vless-80
-    // - cf-vless-8080
-    // - cf-vless-8880
-    // - cf-vless-2052
-    // - cf-vless-2082
-    // - cf-vless-2086
-    // - cf-vless-2095
     - cf-vless-tls-443
     - cf-vless-tls-2053
     - cf-vless-tls-2083
@@ -1208,13 +1108,6 @@ function getSingConfig(userID, hostName) {
       "default": "auto",
       "outbounds": [
         "auto",
-        // "cf-vless-80",
-        // "cf-vless-8080",
-        // "cf-vless-8880",
-        // "cf-vless-2052",
-        // "cf-vless-2082",
-        // "cf-vless-2086",
-        // "cf-vless-2095",
         "cf-vless-tls-443",
         "cf-vless-tls-2053",
         "cf-vless-tls-2083",
@@ -1222,125 +1115,6 @@ function getSingConfig(userID, hostName) {
         "cf-vless-tls-2096",
         "cf-vless-tls-8443"
       ]
-    },
-    {
-      "server": "${bestCFIP}",
-      "server_port": 80,
-      "tag": "cf-vless-80",
-      "packet_encoding": "packetaddr",
-      "transport": {
-        "headers": {
-          "Host": [
-            "${hostName}"
-          ]
-        },
-        "path": "/",
-        "type": "ws"
-      },
-      "type": "vless",
-      "uuid": "${userID}"
-    },
-    {
-      "server": "${bestCFIP}",
-      "server_port": 8080,
-      "tag": "cf-vless-8080",
-      "packet_encoding": "packetaddr",
-      "transport": {
-        "headers": {
-          "Host": [
-            "${hostName}"
-          ]
-        },
-        "path": "/",
-        "type": "ws"
-      },
-      "type": "vless",
-      "uuid": "${userID}"
-    },
-    {
-      "server": "${bestCFIP}",
-      "server_port": 8880,
-      "tag": "cf-vless-8880",
-      "packet_encoding": "packetaddr",
-      "transport": {
-        "headers": {
-          "Host": [
-            "${hostName}"
-          ]
-        },
-        "path": "/",
-        "type": "ws"
-      },
-      "type": "vless",
-      "uuid": "${userID}"
-    },
-    {
-      "server": "${bestCFIP}",
-      "server_port": 2052,
-      "tag": "cf-vless-2052",
-      "packet_encoding": "packetaddr",
-      "transport": {
-        "headers": {
-          "Host": [
-            "${hostName}"
-          ]
-        },
-        "path": "/",
-        "type": "ws"
-      },
-      "type": "vless",
-      "uuid": "${userID}"
-    },
-    {
-      "server": "${bestCFIP}",
-      "server_port": 2082,
-      "tag": "cf-vless-2082",
-      "packet_encoding": "packetaddr",
-      "transport": {
-        "headers": {
-          "Host": [
-            "${hostName}"
-          ]
-        },
-        "path": "/",
-        "type": "ws"
-      },
-      "type": "vless",
-      "uuid": "${userID}"
-    },
-    {
-      "server": "${bestCFIP}",
-      "server_port": 2086,
-      "tag": "cf-vless-2086",
-      "packet_encoding": "packetaddr",
-      "transport": {
-        "headers": {
-          "Host": [
-            "${hostName}"
-          ]
-        },
-        "path": "/",
-        "type": "ws"
-      },
-      "type": "vless",
-      "uuid": "${userID}"
-    },
-    {
-      "server": "${bestCFIP}",
-      "server_port": 2095,
-      "tag": "cf-vless-2095",
-      "packet_encoding": "packetaddr",
-      "transport": {
-        "headers": {
-          "Host": [
-            "${hostName}"
-          ]
-        },
-        "path": "/",
-        "type": "ws"
-      },
-      "type": "vless",
-      "uuid": "${userID}"
     },
     {
       "server": "${bestCFIP}",
@@ -1514,13 +1288,6 @@ function getSingConfig(userID, hostName) {
       "tag": "auto",
       "type": "urltest",
       "outbounds": [
-        // "cf-vless-80",
-        // "cf-vless-8080",
-        // "cf-vless-8880",
-        // "cf-vless-2052",
-        // "cf-vless-2082",
-        // "cf-vless-2086",
-        // "cf-vless-2095",
         "cf-vless-tls-443",
         "cf-vless-tls-2053",
         "cf-vless-tls-2083",
