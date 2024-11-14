@@ -1041,13 +1041,13 @@ proxy-groups:
   url: http://www.gstatic.com/generate_204
   interval: 300
   proxies:
-    - cf-vless-80
-    - cf-vless-8080
-    - cf-vless-8880
-    - cf-vless-2052
-    - cf-vless-2082
-    - cf-vless-2086
-    - cf-vless-2095
+    // - cf-vless-80
+    // - cf-vless-8080
+    // - cf-vless-8880
+    // - cf-vless-2052
+    // - cf-vless-2082
+    // - cf-vless-2086
+    // - cf-vless-2095
     - cf-vless-tls-443
     - cf-vless-tls-2053
     - cf-vless-tls-2083
@@ -1061,13 +1061,13 @@ proxy-groups:
   interval: 300
   tolerance: 50
   proxies:
-    - cf-vless-80
-    - cf-vless-8080
-    - cf-vless-8880
-    - cf-vless-2052
-    - cf-vless-2082
-    - cf-vless-2086
-    - cf-vless-2095
+    // - cf-vless-80
+    // - cf-vless-8080
+    // - cf-vless-8880
+    // - cf-vless-2052
+    // - cf-vless-2082
+    // - cf-vless-2086
+    // - cf-vless-2095
     - cf-vless-tls-443
     - cf-vless-tls-2053
     - cf-vless-tls-2083
@@ -1081,13 +1081,13 @@ proxy-groups:
     - 负载均衡
     - 自动选择
     - DIRECT
-    - cf-vless-80
-    - cf-vless-8080
-    - cf-vless-8880
-    - cf-vless-2052
-    - cf-vless-2082
-    - cf-vless-2086
-    - cf-vless-2095
+    // - cf-vless-80
+    // - cf-vless-8080
+    // - cf-vless-8880
+    // - cf-vless-2052
+    // - cf-vless-2082
+    // - cf-vless-2086
+    // - cf-vless-2095
     - cf-vless-tls-443
     - cf-vless-tls-2053
     - cf-vless-tls-2083
@@ -1208,13 +1208,13 @@ function getSingConfig(userID, hostName) {
       "default": "auto",
       "outbounds": [
         "auto",
-        "cf-vless-80",
-        "cf-vless-8080",
-        "cf-vless-8880",
-        "cf-vless-2052",
-        "cf-vless-2082",
-        "cf-vless-2086",
-        "cf-vless-2095",
+        // "cf-vless-80",
+        // "cf-vless-8080",
+        // "cf-vless-8880",
+        // "cf-vless-2052",
+        // "cf-vless-2082",
+        // "cf-vless-2086",
+        // "cf-vless-2095",
         "cf-vless-tls-443",
         "cf-vless-tls-2053",
         "cf-vless-tls-2083",
@@ -1514,13 +1514,13 @@ function getSingConfig(userID, hostName) {
       "tag": "auto",
       "type": "urltest",
       "outbounds": [
-        "cf-vless-80",
-        "cf-vless-8080",
-        "cf-vless-8880",
-        "cf-vless-2052",
-        "cf-vless-2082",
-        "cf-vless-2086",
-        "cf-vless-2095",
+        // "cf-vless-80",
+        // "cf-vless-8080",
+        // "cf-vless-8880",
+        // "cf-vless-2052",
+        // "cf-vless-2082",
+        // "cf-vless-2086",
+        // "cf-vless-2095",
         "cf-vless-tls-443",
         "cf-vless-tls-2053",
         "cf-vless-tls-2083",
