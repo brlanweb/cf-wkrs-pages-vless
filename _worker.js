@@ -1096,6 +1096,9 @@ proxy-groups:
     - cf-vless-tls-8443
 
 rules:
+  - DOMAIN-SUFFIX,ozon.ru,DIRECT
+  - DOMAIN-SUFFIX,ozon.com,DIRECT
+  - DOMAIN-SUFFIX,worldfirst.com.cn,DIRECT  
   - DOMAIN-SUFFIX,aliyun.com,DIRECT
   - DOMAIN-SUFFIX,aisa.fun,DIRECT
   - DOMAIN-SUFFIX,cloudflare.com,DIRECT
