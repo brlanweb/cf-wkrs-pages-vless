@@ -859,18 +859,6 @@ dns:
       - 240.0.0.0/4
 
 proxies:
-- name: cf-vless-80
-  type: vless
-  server: ${bestCFIP}
-  port: 80
-  uuid: ${userID}
-  udp: false
-  tls: false
-  network: ws
-  ws-opts:
-    path: "/?ed=2048"
-    headers:
-      Host: ${hostName}
 
 - name: cf-vless-tls-443
   type: vless
