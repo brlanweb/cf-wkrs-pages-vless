@@ -14,7 +14,7 @@ let userID = 'd342d11e-d424-4583-b36e-524ab1f0afa4';
 // 104.20.27.211
 // 104.20.26.129
 
-const bestCFIP = "time.is"
+const bestCFIP = "172.67.79.183"
 
 // 用于 CF 网站的代理 IP
 // const proxyIPs = ["workers.cloudflare.cyou"]; 
