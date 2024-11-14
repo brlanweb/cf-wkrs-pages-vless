@@ -1096,6 +1096,7 @@ proxy-groups:
     - cf-vless-tls-8443
 
 rules:
+  - DOMAIN-SUFFIX,aliyun.com,DIRECT
   - DOMAIN-SUFFIX,aisa.fun,DIRECT
   - DOMAIN-SUFFIX,cloudflare.com,DIRECT
   - GEOIP,LAN,DIRECT
